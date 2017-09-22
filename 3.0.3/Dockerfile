@@ -6,10 +6,10 @@ ENV SONAR_SCANNER_VERSION 3.0.3.778 \
 
 RUN wget "https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-${SONAR_SCANNER_VERSION}.zip" && /
     unzip "sonar-scanner-${SONAR_SCANNER_VERSION}.zip" &&
-	mkdir -p /data
+	mkdir -p /workspace
 
-VOLUME /data
-WORKDIR /data
+VOLUME /workspace
+WORKDIR /workspace
 
 ENTRYPOINT ["sonar-scanner"]
 CMD ["--help"]
