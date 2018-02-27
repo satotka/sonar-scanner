@@ -7,6 +7,9 @@ ARG SONAR_SCANNER_URL=https://sonarsource.bintray.com/Distribution/sonar-scanner
 RUN apk update && \
     apk add ca-certificates wget nodejs && \
     update-ca-certificates
+    
+# install TypeScript
+RUN npm install typescript -g
 
 # install sonar-scanner
 RUN wget -q ${SONAR_SCANNER_URL} -O /sonar-scanner.zip && \
