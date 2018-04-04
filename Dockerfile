@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-alpine
 
-ARG SONAR_SCANNER_VERSION=3.0.3.778
+ARG SONAR_SCANNER_VERSION=3.1.0.1141
 ARG SONAR_SCANNER_URL=https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}.zip
 
 # install wget with ca, nodejs(for SonarTS Plugin)
@@ -25,4 +25,3 @@ WORKDIR /workspace
 
 ENTRYPOINT ["sonar-scanner"]
 CMD ["--help"]
-

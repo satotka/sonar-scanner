@@ -9,7 +9,7 @@ $ docker run --volume $(pwd):/workspace satotka/sonar-scanner <sonar-options>
 
 ```
 
-# exsample
+# example
 
 ```
 $ docker run --rm \
