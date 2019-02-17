@@ -5,7 +5,7 @@ ARG SONAR_SCANNER_URL=https://sonarsource.bintray.com/Distribution/sonar-scanner
 
 # install wget with ca, nodejs(for SonarTS Plugin)
 RUN apk update && \
-    apk add ca-certificates wget nodejs npm && \
+    apk add ca-certificates wget nodejs npm git && \
     update-ca-certificates
 
 # install TypeScript
