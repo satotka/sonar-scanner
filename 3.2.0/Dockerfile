@@ -1,7 +1,7 @@
 FROM openjdk:8-jre-alpine
 
 ARG SONAR_SCANNER_VERSION=3.2.0.1227
-ARG SONAR_SCANNER_URL=https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}.zip
+ARG SONAR_SCANNER_URL=https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}.zip
 
 # install wget with ca, nodejs(for SonarTS Plugin)
 RUN apk update && \
