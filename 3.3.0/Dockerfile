@@ -16,12 +16,8 @@ RUN wget -q ${SONAR_SCANNER_URL} -O /sonar-scanner.zip && \
     unzip sonar-scanner.zip && \
     rm sonar-scanner.zip
 
-# install sonarqube build wrapper
-ADD build-wrapper-macosx-x86/ /opt/sonarqube-build-wrapper/
-RUN chmod 755 /opt/sonarqube-build-wrapper/*
-
 # set environmnets
-ENV PATH="/sonar-scanner-${SONAR_SCANNER_VERSION}/bin:/opt/sonarqube-build-wrapper:${PATH}" \
+ENV PATH="/sonar-scanner-${SONAR_SCANNER_VERSION}/bin:${PATH}" \
     SONAR_SCANNER_OPTS="-Xms1024m -Xmx1024m"
 
 VOLUME /workspace
