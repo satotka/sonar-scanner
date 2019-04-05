@@ -9,7 +9,9 @@ RUN apk update && \
     update-ca-certificates
 
 # install TypeScript
-RUN npm install typescript -g
+# See: https://github.com/npm/uid-number/issues/7
+RUN npm config set unsafe-perm true && npm install typescript -g
+ENV NODE_PATH=/usr/bin/tsc:/usr/bin/tsserver
 
 # install sonar-scanner
 RUN wget -q ${SONAR_SCANNER_URL} -O /sonar-scanner.zip && \
