@@ -4,16 +4,16 @@
 
 volume mount: project source directory for /workspace
 
-```
-$ docker run --volume $(pwd):/workspace satotka/sonar-scanner <sonar-options>
+```bash
+$ docker run --volume `pwd`:/workspace satotka/sonar-scanner <sonar-options>
 
 ```
 
 # example
 
-```
+```bash
 $ docker run --rm \
-  --volume $(pwd):/workspace \
+  --volume `pwd`:/workspace \
   satotka/sonar-scanner \
   -Dsonar.sources=. \
   -Dsonar.host.url=https://yourserver \
