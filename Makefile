@@ -1,6 +1,6 @@
 SAMPLE_PROJECT_DIR=sample
 TEST_IMAGE=sonar-scanner-test
-SONAR_VERSION=4.2.0
+SONAR_VERSION=4.3.0
 
 build:
 	docker build --tag $(TEST_IMAGE) --file $(SONAR_VERSION)/Dockerfile .
